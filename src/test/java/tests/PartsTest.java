@@ -1,12 +1,12 @@
 package tests;
 
-import io.appium.java_client.android.AndroidElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import steps.CarPartsSteps;
 import steps.HomePageSteps;
-import utilities.BeforeAndAfterTest;
+import utilities.BaseTest;
 
-public class PartsTest extends BeforeAndAfterTest {
+public class PartsTest extends BaseTest {
 
     @Test
     public void searchValidateResultsForMercedesBenzWheelsParts() {
@@ -19,6 +19,10 @@ public class PartsTest extends BeforeAndAfterTest {
         5. Click to show search results
         6. Validate search results - if any results than PASS
          */
+
+        HomePageSteps.goToPartsTabDriver();
+        CarPartsSteps.rollOutSearchForm();
+        CarPartsSteps.fillFormSearchWheelsPartsForMecedesBenz();
 
         Assert.assertTrue(true);
 

@@ -2,22 +2,16 @@ package steps;
 
 import io.appium.java_client.android.AndroidElement;
 import pages.HomeCarsPages;
-import utilities.BeforeAndAfterTest;
+import utilities.AndroidModel;
 
 import java.util.List;
 
-public class HomePageSteps extends BeforeAndAfterTest {
+public class HomePageSteps {
 
-    private List<AndroidElement> buttons;
+    public static void goToPartsTabDriver() {
+//        List<AndroidElement> tabs = AndroidModel.findElementsBy(HomeCarsPages.czesciTab);
+//        tabs.get(1).click();
 
-    private static String osoboweBtnName = "OSOBOWE";
-    private static String czesciBtnName = "CZĘŚCI";
-
-    public HomePageSteps() {
-
-    }
-
-    private void findButtonsOnBar() {
-        buttons = driver.findElements(HomeCarsPages.czesciTab);
+        AndroidModel.findElementByText(HomeCarsPages.czesciBtnName).click();
     }
 }
