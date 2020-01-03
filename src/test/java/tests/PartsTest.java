@@ -6,8 +6,6 @@ import org.testng.annotations.Test;
 import steps.HomePageSteps;
 import utilities.BeforeAndAfterTest;
 
-import java.util.List;
-
 public class PartsTest extends BeforeAndAfterTest {
 
     @Test
@@ -21,15 +19,6 @@ public class PartsTest extends BeforeAndAfterTest {
         5. Click to show search results
         6. Validate search results - if any results than PASS
          */
-
-
-        List<AndroidElement> buttons = new HomePageSteps().findButtonsOnBar();
-        System.out.println(buttons.size());
-
-        for (AndroidElement button : buttons
-        ) {
-            System.out.println("-----> " + button.getText());
-        }
 
         Assert.assertTrue(true);
 

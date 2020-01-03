@@ -18,7 +18,6 @@ public class BeforeAndAfterTest {
 
     @BeforeTest
     public void beforeTest() throws MalformedURLException {
-
         androidHandler = new AndroidHandler();
         driver = androidHandler.driver;
         wait = androidHandler.wait;
