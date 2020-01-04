@@ -14,4 +14,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: clean test -Dtest=PartsTest -e -f pom.xml
+      run: mvn -Dtest=PartsTest -e -f pom.xml
