@@ -10,8 +10,6 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -69,11 +67,11 @@ public class AndroidModel {
     }
 
     public static void swipeDown() {
-        swipe(30,1316, 30,800);
+        swipe(30, 1316, 30, 800);
     }
 
     public static void swipeUp() {
-        swipe(30,800, 30,1316);
+        swipe(30, 800, 30, 1316);
     }
 
     public static void sendText(By element, String text) {
@@ -81,11 +79,11 @@ public class AndroidModel {
         driver.findElement(element).sendKeys(text);
     }
 
-    public static void waitElementToBePresent(By element){
+    public static void waitElementToBePresent(By element) {
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
     }
 
-    public static void waitElementToBePresentWithText(String element){
+    public static void waitElementToBePresentWithText(String element) {
         By by = MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + element + "\")");
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
     }

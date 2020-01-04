@@ -1,6 +1,5 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import steps.CarPartsSteps;
 import steps.HomePageSteps;
@@ -25,7 +24,7 @@ public class PartsTest extends BaseTest {
         CarPartsSteps.rollOutSearchForm();
         CarPartsSteps.fillFormSearchWheelsPartsForMecedesBenz();
         CarPartsSteps.clickSearch();
-        Assert.assertNotEquals(SearchResultsSteps.checkResulst(), 0, "No search results!");
+        SearchResultsSteps.checkResulst();
 
     }
 
