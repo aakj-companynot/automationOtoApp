@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import steps.CarPartsSteps;
 import steps.HomePageSteps;
+import steps.SearchResultsSteps;
 import utilities.BaseTest;
 
 public class PartsTest extends BaseTest {
@@ -23,8 +24,8 @@ public class PartsTest extends BaseTest {
         HomePageSteps.goToPartsTabDriver();
         CarPartsSteps.rollOutSearchForm();
         CarPartsSteps.fillFormSearchWheelsPartsForMecedesBenz();
-
-        Assert.assertTrue(true);
+        CarPartsSteps.clickSearch();
+        Assert.assertNotEquals(SearchResultsSteps.checkResulst(), 0, "No search results!");
 
     }
 
